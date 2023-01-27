@@ -1,15 +1,13 @@
-// create a form to add a product to the database
-
 import React, {useState} from "react";
 import axios from "axios";
 
-export default () => {
+const ProductForm = (props) => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
 
   const onSubmitHandler = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     axios
       .post("http://localhost:8000/api/products", {
         title,
@@ -19,26 +17,27 @@ export default () => {
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
+
   return (
-    <div className="Form">
-      <form onSubmit={onSubmitHandler}>
-        <p>
+    <div>
+      <form className="Form" onSubmit={onSubmitHandler}>
+        <h1>Product Manager</h1>
+        <div className="Input">
           <label>Title</label>
-          <br />
           <input type="text" onChange={(e) => setTitle(e.target.value)} />
-        </p>
-        <p>
+        </div>
+        <div className="Input">
           <label>Price</label>
-          <br />
           <input type="number" onChange={(e) => setPrice(e.target.value)} />
-        </p>
-        <p>
+        </div>
+        <div className="Input">
           <label>Description</label>
-          <br />
           <input type="text" onChange={(e) => setDescription(e.target.value)} />
-        </p>
-        <input type="submit" />
+        </div>
+        <input className="Btn bgr" type="submit" value="Add" />
       </form>
     </div>
   );
 };
+
+export default ProductForm;

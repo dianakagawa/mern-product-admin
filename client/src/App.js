@@ -1,17 +1,18 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import "./App.css";
+
 import Main from "./views/Main";
-import Detail from "./views/Detail";
+import Details from "./views/Details";
+import Update from "./views/Update";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Product Manager</h1>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/products" element={<Main />} />
-          <Route path="/products/:id" element={<Detail />} />
+          <Route path="/products/:id" element={<Details />} />
+          <Route path="/products/:id/edit" element={<Update />} />
         </Routes>
       </BrowserRouter>
     </div>

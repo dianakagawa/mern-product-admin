@@ -1,0 +1,86 @@
+.Container {
+  margin: 0 auto;
+  align-items: center;
+  width: 400px;
+  background-color: #f2f2f2;
+  padding: 15px 0;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Navigation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.Title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Other {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.Btn {
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 2px 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.bgr {
+  background-color: silver;
+  color: black;
+  font-weight: 400;
+  border-radius: 5px;
+}
+
+.Links {
+  text-decoration: none;
+  font-weight: bold;
+  color: darkgrey;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.Links:hover {
+  color: rebeccapurple;
+}
+
+.Input {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  background-color: #f2f2f2;
+  border: 1px solid silver;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px 5px;
+  color: gray;
+}
+
+.Input label {
+  flex: 1;
+}
+
+.Input input {
+  flex: 2;
+  border: 1px solid silver;
+  padding: 5px;
+}
