@@ -1,5 +1,3 @@
-// configure mongoose
-
 const mongoose = require("mongoose");
 mongoose
   .connect("mongodb://localhost/products_db", {
